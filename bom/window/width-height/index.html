@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Width - Height</title>
+</head>
+<body>
+  <p>
+     <strong>Width:</strong> <span id="width">-</span>  -  <strong>Content Width:</strong> <span id="contentWidth">-</span>
+  </p>
+  <p>
+    <strong>Height:</strong> <span id="height">-</span>  -  <strong>Content Height:</strong> <span id="contentHeight">-</span>
+  </p>
+
+  <script>
+    window.addEventListener('resize', handleResize)
+
+    function handleResize () {
+      document.getElementById("contentWidth").innerText = window.innerWidth + "px"
+      document.getElementById("contentHeight").innerText = window.innerHeight + "px"
+
+      document.getElementById("width").innerText = window.outerWidth + "px"
+      document.getElementById("height").innerText = window.outerHeight + "px"
+    }
+
+    handleResize()
+  </script>
+</body>
+</html>
