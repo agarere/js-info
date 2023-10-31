@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parent Window</title>
+</head>
+<body>
+    <button onclick="getParams()">Get Product</button>
+    <script>
+        function getParams() {
+          let productName = prompt('Product Name ?');
+          let productQuantity = prompt('Product Quantity ?');
+          let quantity = Number(productQuantity);
+
+          const newURL = new URL("popup.html", window.location.href);
+          newURL.searchParams.set("productName", productName);
+          newURL.searchParams.set("productQuantity", quantity);
+
+          const popup = window.open(newURL, "Product Card", "width=400, height=400");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Card</title>
+</head>
+<body>
+
+  <p>
+    <strong>Product Name:</strong> <span id="productNameID">-</span>
+  </p>
+  <p>
+    <strong>Product Quantity:</strong> <span id="productQuantityID">-</span>
+  </p>
+  <script>
+    function getParams () {
+      const searchParams = new URLSearchParams(window.location.search);
+      document.getElementById("productNameID").innerText = searchParams.get("productName")
+      document.getElementById("productQuantityID").innerText = searchParams.get("productQuantity")
+    }
+
+    getParams()
+  </script>
+</body>
+</html>
