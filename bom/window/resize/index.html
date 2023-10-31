@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resize</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <button onClick="newWindow()">New Window</button>
+  </div>
+
+  <div class="container">
+    <button onClick="setSize(400)">Small</button>
+    <button onClick="setSize(600)">Medium</button>
+    <button onClick="setSize(800)">Large</button>
+  </div>
+  <script>
+    function newWindow() {
+      myWindow = window.open("", "", "width=400, height=400");
+    }
+    
+    function setSize (size) {
+      myWindow.resizeTo(Number(size), Number(size));
+    }
+  </script>
+</body>
+</html>
