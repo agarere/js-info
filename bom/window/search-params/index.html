@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Search Params</title>
+</head>
+<body>
+  <ul id="param-list"></ul>
+  <script>
+    const urlParams = new URLSearchParams(location.search);
+    const paramList = document.getElementById("param-list");
+    for (const [key, value] of urlParams) {
+        console.log(`${key}:${value}`);
+        const listItem = document.createElement('li')
+        listItem.innerHTML = `<p><b>${key}:</b> ${value}</p>`
+        paramList.appendChild(listItem)
+    }
+  </script>
+</body>
+</html>
