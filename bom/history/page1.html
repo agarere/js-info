@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Page 1</title>
+</head>
+<body>
+  <h1>PAGE - 1</h1>
+  <button onclick="reload()">Reload</button>
+  <button onclick="next()">Next</button>
+
+  <script>
+    function reload () {
+      history.go();
+    }
+    function next () {
+      location.href = new URL("page2.html", window.location.href);
+    }
+  </script>
+</body>
+</html>
